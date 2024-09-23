@@ -7,16 +7,16 @@ const Navbar = () => {
     <nav className="navbar">
 
         <div className="navbar-logo">
-            <Link to={'/'}>MI LOGO</Link>
+            <Link to={'/'}> <img src="/Assets/img/logo.jpg" alt="Sport Center" width="80" height="80"/></Link>
         </div>
         <div className="navbar-container">
 
             <ul className="navbar-links">
 
-                <li><Link to='/category/voley' className="link">Voley</Link></li>
-                <li><Link to='/category/futbol' className="link">Futbol</Link></li>
-                <li><Link to='/category/accesorios' className="link">Accesorios</Link></li>
-                <li><Link to='/contacto' className="link">Contacto</Link></li>
+                <li><NavLink to='/category/voley' className={({isActive}) => (isActive ? "link active" : "link")}>Voley</NavLink></li>
+                <li><NavLink to='/category/futbol' className={({isActive}) => (isActive ? "link active" : "link")}>Futbol</NavLink></li>
+                <li><NavLink to='/category/basket' className={({isActive}) => (isActive ? "link active" : "link")}>BasketBall</NavLink></li>
+                <li><NavLink to='/contacto' className={({isActive}) => (isActive ? "link active" : "link")}>Contacto</NavLink></li>
             </ul>
         </div>
 
